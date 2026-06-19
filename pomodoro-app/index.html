@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>番茄钟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="titlebar">
+    <span class="titlebar-title">番茄钟</span>
+    <button class="titlebar-close" id="closeBtn" title="关闭">✕</button>
+  </div>
+  <div class="container">
+    <div class="mode-switch">
+      <button id="focusBtn" class="active">专注</button>
+      <button id="breakBtn">休息</button>
+    </div>
+    <div class="timer">
+      <span id="time">25:00</span>
+    </div>
+    <div class="controls">
+      <button id="startBtn">开始</button>
+      <button id="resetBtn">重置</button>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

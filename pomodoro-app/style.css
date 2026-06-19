@@ -1,0 +1,148 @@
+/* ==================== 重置 & 基础 ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== 自定义标题栏 ==================== */
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  background: #1a1a2e;
+  padding: 0 12px;
+  /* 让标题栏可拖动窗口 */
+  -webkit-app-region: drag;
+  flex-shrink: 0;
+}
+
+.titlebar-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+}
+
+.titlebar-close {
+  -webkit-app-region: no-drag;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.titlebar-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* ==================== 主内容卡片 ==================== */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 40px;
+}
+
+/* ==================== 模式切换按钮 ==================== */
+.mode-switch {
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.mode-switch button {
+  padding: 10px 28px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.mode-switch button.active {
+  background: #fff;
+  color: #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mode-switch button:not(.active):hover {
+  color: #fff;
+}
+
+/* ==================== 计时器 ==================== */
+.timer span {
+  font-size: 88px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 6px;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== 控制按钮 ==================== */
+.controls {
+  display: flex;
+  gap: 16px;
+}
+
+.controls button {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#startBtn {
+  background: #fff;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#resetBtn {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+#resetBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
