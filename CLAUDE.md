@@ -38,10 +38,6 @@ npm run build     # Creates installer in dist/
 | `index.html` | UI markup |
 | `style.css` | Gradient background, custom titlebar styling |
 
-## Communication
-
-- Always respond in Chinese (中文交流)
-
 ## Notes
 
 - No tests exist in this project
